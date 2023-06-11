@@ -1,0 +1,122 @@
+@import '/app/globals.css';
+.main {
+    padding-inline: 1rem;
+}
+
+.hero {
+    min-height: 50vh;
+    min-height: 50lvh;
+    display: grid;
+    place-content: center;
+}
+
+.hero img {
+    display: none;
+    pointer-events: none;
+}
+
+.hero_text {
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.hero_left {
+    display: grid;
+    place-content: center;
+}
+
+.greeting {
+    font-size: 1.5rem;
+}
+
+.name {
+    --gradient: var(--gradient-500);
+    font-size: min(6rem, 20vw);
+    line-height: 0.8;
+    margin-left: -5px;
+}
+
+.description {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.my_websites,
+.my_projects {
+    --gradient: rgb(var(--indigo-300)), rgb(var(--indigo-800));
+    font-size: 2rem;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.cards {
+    display: grid;
+    place-items: center;
+    place-content: center;
+    gap: 1rem;
+}
+
+.cards > div {
+    flex: 1;
+    max-width: 24rem;
+    margin-bottom: 1rem;
+    padding: 2rem 1rem;
+    background-color: rgb(var(--violet-800) / 7%);
+    border: 1px solid rgb(var(--violet-800) / 10%);
+}
+
+.cards > div > h2 {
+    margin-bottom: 2rem;
+    color: rgb(var(--violet-300));
+    text-shadow: 2px 2px 5px rgb(var(--violet-100) / 20%);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.my_projects {
+    --gradient: rgb(var(--amber-500)), rgb(var(--pink-500));
+}
+
+.projects {
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .description {
+        font-size: 1rem;
+    }
+    .my_websites,
+    .my_projects {
+        font-size: 3rem;
+    }
+    .cards {
+        gap: 2rem;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .projects {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1280px) {
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 75vh;
+        min-height: 75lvh;
+    }
+    .hero img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
