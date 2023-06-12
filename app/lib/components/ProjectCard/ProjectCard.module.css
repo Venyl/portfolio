@@ -33,6 +33,7 @@
 .project_card > ul {
     grid-column: span 2;
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     list-style: none;
 }
