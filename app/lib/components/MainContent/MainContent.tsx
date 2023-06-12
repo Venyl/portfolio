@@ -150,7 +150,7 @@ export default function MainContent() {
             </div>
 
             <h2 id="skills" className={`${styles.my_skills} gradient`}>
-                What I know
+                My skillset
             </h2>
             <div className={styles.skills}>
                 <SkillBadge icon="tabler:brand-html5" skill="HTML" />

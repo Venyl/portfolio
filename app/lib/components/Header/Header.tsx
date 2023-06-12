@@ -12,7 +12,7 @@ export default function Header() {
                         <a href="#projects">Projects</a>
                     </li>
                     <li>
-                        <a href="#skills">Skills</a>
+                        <a href="#skills">Skillset</a>
                     </li>
                     <li style={{ pointerEvents: 'none' }}>&nbsp;</li>
                 </ul>
