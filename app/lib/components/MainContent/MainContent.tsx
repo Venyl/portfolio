@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from './MainContent.module.css';
-import heroImg from '@lib/assets/hero-img.svg';
+import heroImg1 from '@lib/assets/hero-img1.svg';
+import heroImg2 from '@lib/assets/hero-img2.svg';
 import dreampad from '@lib/assets/dreampad2.png';
 import gamebox from '@lib/assets/gamebox.png';
 import zawodowe from '@lib/assets/zawodowe.png';
@@ -68,11 +69,17 @@ export default function MainContent() {
                     </p>
                     <button className="cta-btn">Contact Me</button>
                 </div>
-                <div>
+                <div className={styles.hero_right}>
                     <Image
-                        src={heroImg}
+                        src={heroImg1}
                         alt="vector image of a computer"
-                        width={900}
+                        width={700}
+                        height={600}
+                    />
+                    <Image
+                        src={heroImg2}
+                        alt="vector image of a computer"
+                        width={700}
                         height={600}
                     />
                 </div>
@@ -142,7 +149,7 @@ export default function MainContent() {
                 ))}
             </div>
 
-            <h2 id="skills" className={`${styles.my_projects} gradient`}>
+            <h2 id="skills" className={`${styles.my_skills} gradient`}>
                 What I know
             </h2>
             <div className={styles.skills}>

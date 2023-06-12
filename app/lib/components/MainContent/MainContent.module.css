@@ -9,13 +9,8 @@
 
 .hero {
     display: grid;
-    margin-top: 25vh;
+    margin-top: 20vh;
     place-content: center;
-}
-
-.hero img {
-    display: none;
-    pointer-events: none;
 }
 
 .hero_text {
@@ -44,8 +39,39 @@
     font-size: 0.9rem;
 }
 
+.hero_right {
+    display: none;
+    width: 700px;
+    height: 600px;
+    position: relative;
+}
+
+.hero_right > img {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    pointer-events: none;
+}
+
+.hero_right > img:nth-child(2) {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-15px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
 .my_websites,
-.my_projects {
+.my_projects,
+.my_skills {
     --gradient: rgb(var(--indigo-300)), rgb(var(--indigo-800));
     font-size: 2rem;
     margin: 2rem auto;
@@ -86,12 +112,16 @@
 }
 
 .my_projects {
-    --gradient: rgb(var(--amber-500)), rgb(var(--pink-500));
+    --gradient: rgb(var(--violet-500)), rgb(var(--pink-500));
 }
 
 .projects {
     display: grid;
     gap: 2rem;
+}
+
+.my_skills {
+    --gradient: rgb(var(--pink-500)), rgb(var(--amber-500));
 }
 
 .skills {
@@ -109,7 +139,8 @@
     }
 
     .my_websites,
-    .my_projects {
+    .my_projects,
+    .my_skills {
         font-size: 3rem;
     }
 
@@ -131,10 +162,8 @@
         grid-template-columns: 1fr 1fr;
     }
 
-    .hero img {
+    .hero_right {
         display: block;
-        width: 100%;
-        height: auto;
     }
 
     .cards {
