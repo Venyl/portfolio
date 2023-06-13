@@ -19,8 +19,8 @@
     inset: 0;
     background-image: linear-gradient(
         to top left,
-        rgb(var(--pink-500) / 6%),
-        rgb(var(--amber-500) / 6%)
+        rgb(var(--pink-500) / 5%),
+        rgb(var(--amber-500) / 5%)
     );
     border-radius: 0.5em;
     border: 1px solid rgb(var(--amber-500) / 5%);
