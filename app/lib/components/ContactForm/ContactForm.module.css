@@ -1,0 +1,79 @@
+@import '/app/globals.css';
+
+.form {
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    max-width: 32rem;
+    background: inherit;
+    position: relative;
+    padding: 2rem 4rem;
+}
+
+.form:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(
+        to top left,
+        rgb(var(--pink-500) / 6%),
+        rgb(var(--amber-500) / 6%)
+    );
+    border-radius: 0.5em;
+    border: 1px solid rgb(var(--amber-500) / 5%);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+.form h2 {
+    margin: 0;
+    --gradient: rgb(var(--amber-400)), rgb(var(--violet-400));
+}
+
+.form div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form label {
+    display: block;
+    font-weight: bold;
+    color: rgb(var(--amber-300));
+}
+
+.form input,
+.form textarea {
+    color: inherit;
+    width: 100%;
+    padding: 0.25em 0.5em;
+    background-color: rgb(var(--bg) / 20%);
+    border: 1px solid rgb(232 125 116 / 40%);
+
+    border-radius: 0.25em;
+    outline: 0px solid transparent;
+    transition: outline 300ms ease-out;
+    box-shadow: 0 0 8px -4px rgb(var(--amber-800));
+}
+
+.form input:focus-visible,
+.form textarea:focus-visible {
+    outline: 1px solid rgb(var(--violet-500));
+}
+
+.form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+@media (min-width: 768px) {
+    .form label {
+        font-size: 1.25rem;
+    }
+}

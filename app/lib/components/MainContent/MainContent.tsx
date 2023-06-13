@@ -67,7 +67,9 @@ export default function MainContent() {
                         <br /> I have been learning programming for over{' '}
                         <b>4 years</b>.
                     </p>
-                    <button className="cta-btn">Contact Me</button>
+                    <a href="#contact">
+                        <button className="cta-btn">Contact Me</button>
+                    </a>
                 </div>
                 <div className={styles.hero_right}>
                     <Image
@@ -85,7 +87,7 @@ export default function MainContent() {
                 </div>
             </div>
 
-            <h2 className={`${styles.my_websites} gradient`}>
+            <h2 className={`${styles.my_websites} section-title gradient`}>
                 My websites are...
             </h2>
             <div className={styles.cards}>
@@ -140,7 +142,10 @@ export default function MainContent() {
                 </div>
             </div>
 
-            <h2 id="projects" className={`${styles.my_projects} gradient`}>
+            <h2
+                id="projects"
+                className={`${styles.my_projects} section-title gradient`}
+            >
                 Some of my work
             </h2>
             <div className={styles.projects}>
@@ -149,7 +154,10 @@ export default function MainContent() {
                 ))}
             </div>
 
-            <h2 id="skills" className={`${styles.my_skills} gradient`}>
+            <h2
+                id="skills"
+                className={`${styles.my_skills} section-title gradient`}
+            >
                 My skillset
             </h2>
             <div className={styles.skills}>

@@ -6,6 +6,7 @@
     left: 8px;
     z-index: 1;
     top: 0;
+    padding-bottom: 3rem;
     background-image: linear-gradient(
         to bottom,
         rgb(var(--bg)),

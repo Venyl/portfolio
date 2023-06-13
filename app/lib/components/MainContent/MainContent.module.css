@@ -69,15 +69,6 @@
     }
 }
 
-.my_websites,
-.my_projects,
-.my_skills {
-    --gradient: rgb(var(--indigo-300)), rgb(var(--indigo-800));
-    font-size: 2rem;
-    margin: 2rem auto;
-    text-align: center;
-}
-
 .cards {
     display: grid;
     place-items: center;
@@ -136,12 +127,6 @@
 @media (min-width: 768px) {
     .description {
         font-size: 1rem;
-    }
-
-    .my_websites,
-    .my_projects,
-    .my_skills {
-        font-size: 3rem;
     }
 
     .cards {
