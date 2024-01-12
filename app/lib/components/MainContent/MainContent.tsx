@@ -65,7 +65,7 @@ export default function MainContent() {
                     <p className={styles.description}>
                         I am a <b>front-end</b> developer based in Poland.
                         <br /> I have been learning programming for over{' '}
-                        <b>4 years</b>.
+                        <b>5 years</b>.
                     </p>
                     <a href="#contact">
                         <button className="cta-btn">Contact Me</button>
