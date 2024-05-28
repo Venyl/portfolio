@@ -85,8 +85,8 @@
     max-width: 24rem;
     margin-bottom: 1rem;
     padding: 2rem 1rem;
-    background-color: rgb(var(--violet-800) / 7%);
-    border: 1px solid rgb(var(--violet-800) / 10%);
+    background-color: hsla(260, 60%, 8%, 0.8);
+    border: 1px solid hsla(259, 70%, 12%, 0.8);
 }
 
 .cards > div:hover iconify-icon {

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import styles from './MainContent.module.css';
 import heroImg1 from '@lib/assets/hero-img1.svg';
 import heroImg2 from '@lib/assets/hero-img2.svg';
-import dreampad from '@lib/assets/dreampad2.png';
+import kemptville from '@lib/assets/kemptville.jpg';
 import gamebox from '@lib/assets/gamebox.png';
 import zawodowe from '@lib/assets/zawodowe.png';
 import flagGuesser from '@lib/assets/flag_guesser.png';
@@ -21,18 +21,12 @@ export default function MainContent() {
             link: 'https://zawodowe.it/',
         },
         {
-            title: 'Dreampad',
-            imgSrc: dreampad,
+            title: 'GoodLife',
+            imgSrc: kemptville,
             description:
-                'A note creating app which uses a WYSIWYG editor similar to Microsoft Word.',
-            tags: [
-                'React',
-                'Next.js',
-                'Pocketbase',
-                'Tailwind CSS',
-                'TypeScript',
-            ],
-            link: 'https://dreampad2.netlify.app/',
+                'A beautiful, responsive website created for a dog care business in Kemptville.',
+            tags: ['Vanilla JS', 'Bootstrap'],
+            link: 'kemptvilledogretreat.faster.ws',
         },
         {
             title: 'GameBox',

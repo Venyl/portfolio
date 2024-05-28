@@ -5,28 +5,35 @@ export default function ContactForm() {
     async function sendMail(formData: FormData) {
         'use server';
 
-        // const { default: mail } = await import('@sendgrid/mail');
-        // mail.setApiKey(process.env.SENDGRID_API_KEY!);
+        console.log('hello');
 
-        // const sender = formData.get('sender');
-        // const email = formData.get('email');
-        // const message = formData.get('message');
+        const { default: mail } = await import('@sendgrid/mail');
+        mail.setApiKey(process.env.SENDGRID_API_KEY!);
 
-        // const mailContent = `
-        //     From: ${sender}\r\n
-        //     E-mail: ${email}\r\n
-        //     Message: ${message}
-        // `;
+        const sender = formData.get('sender');
+        const email = formData.get('email');
+        const message = formData.get('message');
 
-        // const mailData = {
-        //     to: 'dawid.gg13@gmail.com',
-        //     from: 'zexe2121@gmail.com',
-        //     subject: `DEV: ${sender}`,
-        //     text: mailContent,
-        //     html: mailContent.replace(/\r\n/g, '<br />'),
-        // };
+        const mailContent = `
+            From: ${sender}\r\n
+            E-mail: ${email}\r\n
+            Message: ${message}
+        `;
 
-        // await mail.send(mailData);
+        const mailData = {
+            to: 'dawid.gg13@gmail.com',
+            from: 'zexe2121@gmail.com',
+            subject: `DEV: ${sender}`,
+            text: mailContent,
+            html: mailContent.replace(/\r\n/g, '<br />'),
+        };
+
+        try {
+            await mail.send(mailData);
+            console.log('email sent');
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     return (
@@ -40,6 +47,11 @@ export default function ContactForm() {
             <div>
                 <label htmlFor="email">Email</label>
                 <input type="email" name="email" id="email" required />
+            </div>
+
+            <div tabIndex={-1}>
+                <label htmlFor="topic">Topic</label>
+                <input type="text" name="topic" id="topic" />
             </div>
 
             <div>
