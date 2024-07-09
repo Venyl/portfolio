@@ -26,7 +26,7 @@ export default function MainContent() {
             description:
                 'A beautiful, responsive website created for a dog care business in Kemptville.',
             tags: ['Vanilla JS', 'Bootstrap'],
-            link: 'kemptvilledogretreat.faster.ws',
+            link: 'https://goodlifedogretreat.ca/',
         },
         {
             title: 'GameBox',
